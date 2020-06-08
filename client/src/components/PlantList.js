@@ -9,6 +9,9 @@ export default class PlantList extends Component {
     };
   }
 
+  //The componentDidMount method is a part of the mounting phase in the "React Lifecycle".
+  //This method gets called as soon as the render method is called the first time This way,
+  // any asynchronous actions should be performed inside of our componentDidMount function, especially when it comes to fetching data.
   componentDidMount() {
     axios
       .get("http://localhost:3333/plants")
@@ -18,6 +21,7 @@ export default class PlantList extends Component {
       })
       .catch((err) => console.log(err));
   }
+
   // add state with a property called "plants" - initialize as an empty array
 
   // when the component mounts:
