@@ -11,10 +11,10 @@ import { useForm } from "../hooks/useForm";
 // };
 
 // This form should be handled by a "useForm" custom hook
-// Build out the logic needed for a form custom hook (see the useForm.js file)
-// and replace the necessary stateful logic from CheckoutForm with the hook
 
-const CheckoutForm = () => {
+// below is my custom "useForm" hook that is here to reuse stateful logic (anything within our component that effects the state).
+//this way we avoid repeating code unnecessarily.
+const CheckoutForm = (props) => {
   const [
     showSuccessMessage,
     setShowSuccessMessage,
